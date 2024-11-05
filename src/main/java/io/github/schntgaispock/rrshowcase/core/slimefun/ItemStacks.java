@@ -86,7 +86,7 @@ public final class ItemStacks {
         "&7Shapeless recipe"
     );
     
-    public static final SlimefunItemStack PIG_IRON = new SlimefunItemStack("PIG_IRON", Material.IRON_BLOCK,
+    public static final SlimefunItemStack PIG_IRON = new SlimefunItemStack("PIG_IRON", Material.NETHERITE_INGOT,
         "&bPig Iron"
     );
     public static final SlimefunItemStack SLIME_INGOT = new SlimefunItemStack("SLIME_INGOT", Material.IRON_INGOT,

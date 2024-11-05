@@ -94,7 +94,7 @@ public final class ItemSetup {
         // Smelting recipes
 
         // TODO: Kind of a pain to write out, maybe a builder?
-        new NewSlimefunItem(ItemGroups.ITEMS, ItemStacks.PIG_IRON, RecipeTypes.CRAFTING, new Recipe(
+        new NewSlimefunItem(ItemGroups.ITEMS, ItemStacks.PIG_IRON, RecipeTypes.SMELTING, new Recipe(
             Optional.empty(),
                 "other_recipes",
                 new RecipeInput(
@@ -130,12 +130,6 @@ public final class ItemSetup {
             null, new ItemStack(Material.COOKED_PORKCHOP), null,
             SlimefunItems.CHEESE, SlimefunItems.CHEESE, SlimefunItems.CHEESE,
             SlimefunItems.WHEAT_FLOUR, SlimefunItems.WHEAT_FLOUR, SlimefunItems.WHEAT_FLOUR,
-        }).register(pl);
-
-        new NewSlimefunItem(ItemGroups.ITEMS, ItemStacks.BEEF_STEW, RecipeTypes.COOKING, new ItemStack[] {
-            null, new ItemStack(Material.COOKED_PORKCHOP), null,
-            SlimefunItems.CHEESE, SlimefunItems.CHEESE, SlimefunItems.CHEESE,
-            SlimefunItems.WHEAT_FLOUR, SlimefunItems.WHEAT_FLOUR, SlimefunItems.WHEAT_FLOUR,
         }, MatchProcedure.SHAPED).register(pl);
 
         new NewSlimefunItem(ItemGroups.ITEMS, ItemStacks.APPLE_PIE, RecipeTypes.COOKING, new ItemStack[] {
@@ -143,6 +137,12 @@ public final class ItemSetup {
             null, null, null,
             null, null, null,
         }).register(pl);
+
+        new NewSlimefunItem(ItemGroups.ITEMS, ItemStacks.BEEF_STEW, RecipeTypes.COOKING, new ItemStack[] {
+            new ItemStack(Material.COOKED_BEEF), new ItemStack(Material.CARROT, 2), new ItemStack(Material.WATER_BUCKET),
+            new ItemStack(Material.POTATO, 2), new ItemStack(Material.BOWL), null,
+            null, null, null,
+        }, new ItemStack[] { ItemStacks.BEEF_STEW, new ItemStack(Material.BUCKET) }).register(pl);
 
         // Altar Recipes
 

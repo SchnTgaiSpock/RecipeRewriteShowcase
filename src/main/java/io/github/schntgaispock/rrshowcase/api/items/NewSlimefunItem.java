@@ -22,9 +22,9 @@ public class NewSlimefunItem extends SlimefunItem {
         Slimefun.getRecipeService().addRecipe(Recipe.fromItemStacks(item.getItemId(), recipe, new ItemStack[] { item }, recipeType));
     }
 
-    public NewSlimefunItem(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, ItemStack output) {
-        super(itemGroup, item, recipeType, recipe, output);
-        Slimefun.getRecipeService().addRecipe(Recipe.fromItemStacks(item.getItemId(), recipe, new ItemStack[] { output }, recipeType));
+    public NewSlimefunItem(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, ItemStack[] output) {
+        super(itemGroup, item, recipeType, recipe, output[0]);
+        Slimefun.getRecipeService().addRecipe(Recipe.fromItemStacks(item.getItemId(), recipe, output, recipeType));
     }
     
     public NewSlimefunItem(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, MatchProcedure match) {
@@ -32,9 +32,9 @@ public class NewSlimefunItem extends SlimefunItem {
         Slimefun.getRecipeService().addRecipe(Recipe.fromItemStacks(item.getItemId(), recipe, new ItemStack[] { item }, recipeType, match));
     }
 
-    public NewSlimefunItem(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, ItemStack output, MatchProcedure match) {
-        super(itemGroup, item, recipeType, recipe, output);
-        Slimefun.getRecipeService().addRecipe(Recipe.fromItemStacks(item.getItemId(), recipe, new ItemStack[] { output }, recipeType, match));
+    public NewSlimefunItem(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, ItemStack[] output, MatchProcedure match) {
+        super(itemGroup, item, recipeType, recipe, output[0]);
+        Slimefun.getRecipeService().addRecipe(Recipe.fromItemStacks(item.getItemId(), recipe, output, recipeType, match));
     }
 
 }
